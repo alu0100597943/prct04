@@ -23,6 +23,8 @@ Funciones a definir:
 
 =end
 
+#<<<<<<< HEAD
+
 #FUNCION MOSTRAR
 def show_matrix(m)
 	c_fil = 0
@@ -32,6 +34,10 @@ def show_matrix(m)
 	end
 	puts
 end
+
+#=======
+#<<<<<<< HEAD
+#>>>>>>> be9af5ee10c02b3a58af01664a468689945c9269
 
 #FUNCION MULTIPLICACION
 def op_multi(a,b)
@@ -54,3 +60,37 @@ def op_multi(a,b)
 	end
 	result
 end
+
+#=======
+
+#FUNCION LLENAR MATRIZ RANDOM
+def rand_matrix(d)
+	m = Array.new(d){|i| nil}
+	cont = 0
+	while(cont < d)
+		p_rand = Random.new()
+		m[cont] = Array.new(d){|j| p_rand.rand(9)}
+		cont = cont + 1
+	end
+	m
+end
+
+
+#FUNCION SUMA
+def op_suma(a,b)
+	result=Array.new(a.length){Array.new(b.length)}
+	i = 0
+	j = 0
+	while i < a.length
+		j = 0
+		while j < b.length
+			result[i][j] = a[i][j] + b[i][j]
+			j += 1
+		end
+		i += 1
+	end
+	return result
+
+end
+
+#>>>>>>> suma
