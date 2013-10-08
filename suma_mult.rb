@@ -46,15 +46,15 @@ def op_multi(a,b)
 	col = 0
 	x_col = 0
 	while(fil < a.length)
-		x_col = 0
-		while(x_col < b.length)
+		col = 0
+		while(col < b.length)
 			aux = 0
-			col = 0
-			while(col < a.length)
-				result[fil][col] += (a[fil][col] * b[col][x_col])
-				col += 1
+			x_col = 0
+			while(x_col < a.length)
+				result[fil][col] += (a[fil][x_col] * b[x_col][col])
+				x_col += 1
 			end
-			x_col += 1
+			col += 1
 		end
 		fil += 1
 	end
@@ -123,17 +123,17 @@ matrix1 = rand_matrix(orden.to_i)
 matrix2 = rand_matrix(orden.to_i)
 
 puts "La matriz A es: "
-mostrar(matrix1)
+show_matrix(matrix1)
 
 puts "La matriz B es: "
-mostrar(matrix2)
+show_matrix(matrix2)
 
 if op=="suma"
 	result=op_suma(matrix1,matrix2)
 	puts "La matriz resultante es: "
-	show_matrix(resu)
+	show_matrix(result)
 elsif op=="multiplicacion"
 	result=op_multi(matrix1,matrix2)
 	puts "La matriz resultante es: "
-	show_matrix(resu)
+	show_matrix(result)
 end
