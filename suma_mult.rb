@@ -80,3 +80,46 @@ def op_suma(a,b)
 end
 
 #>>>>>>> suma
+
+
+#_MENU
+intro = true
+while intro == true
+	puts "Que desea hacer Sumar(1) o Multiplicacion(2)?"
+	STDOUT.flush
+	op=gets.chomp
+	if op == "1"
+		op="suma"
+		intro=false
+	elsif op == "2"
+		op="multiplicacion"
+		intro=false
+	else
+		puts "Entrada erronea..."
+	end
+end
+#________________
+
+#_Recogida de datos
+puts "Indique el orden de las matrices (CUADRADAS)"
+STDOUT.flush
+orden=gets.chomp
+
+matrix1 = rand_matrix(orden.to_i)
+matrix2 = rand_matrix(orden.to_i)
+
+puts "La matriz A es: "
+mostrar(matrix1)
+
+puts "La matriz B es: "
+mostrar(matrix2)
+
+if op=="suma"
+	result=op_suma(matrix1,matrix2)
+	puts "La matriz resultante es: "
+	show_matrix(resu)
+elsif op=="multiplicacion"
+	result=op_multi(matrix1,matrix2)
+	puts "La matriz resultante es: "
+	show_matrix(resu)
+end
