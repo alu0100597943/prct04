@@ -23,6 +23,15 @@ Funciones a definir:
 
 =end
 
+#FUNCION MOSTRAR
+def show_matrix(m)
+	c_fil = 0
+	while(c_fil < m.length)
+		puts "#{m[c_fil]} "
+		c_fil = c_fil + 1
+	end
+	puts
+end
 
 #FUNCION MULTIPLICACION
 def op_multi(a,b)
