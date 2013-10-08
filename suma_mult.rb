@@ -23,3 +23,25 @@ Funciones a definir:
 
 =end
 
+
+#FUNCION MULTIPLICACION
+def op_multi(a,b)
+	result=Array.new(a.length){Array.new(b.length){|i| 0}}
+	fil = 0
+	col = 0
+	x_col = 0
+	while(fil < a.length)
+		x_col = 0
+		while(x_col < b.length)
+			aux = 0
+			col = 0
+			while(col < a.length)
+				result[fil][col] += (a[fil][col] * b[col][x_col])
+				col += 1
+			end
+			x_col += 1
+		end
+		fil += 1
+	end
+	result
+end
