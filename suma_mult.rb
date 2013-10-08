@@ -36,3 +36,20 @@ def rand_matrix(d)
 end
 
 
+#FUNCION SUMA
+def op_suma(a,b)
+	result=Array.new(a.length){Array.new(b.length)}
+	i = 0
+	j = 0
+	while i < a.length
+		j = 0
+		while j < b.length
+			result[i][j] = a[i][j] + b[i][j]
+			j += 1
+		end
+		i += 1
+	end
+	return result
+
+end
+
