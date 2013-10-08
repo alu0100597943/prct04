@@ -23,3 +23,16 @@ Funciones a definir:
 
 =end
 
+#FUNCION LLENAR MATRIZ RANDOM
+def rand_matrix(d)
+	m = Array.new(d){|i| nil}
+	cont = 0
+	while(cont < d)
+		p_rand = Random.new()
+		m[cont] = Array.new(d){|j| p_rand.rand(9)}
+		cont = cont + 1
+	end
+	m
+end
+
+
